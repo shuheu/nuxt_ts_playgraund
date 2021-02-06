@@ -8,5 +8,3 @@
     <Footer />
   </v-app>
 </template>
-
-

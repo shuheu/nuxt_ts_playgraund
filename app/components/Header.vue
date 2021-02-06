@@ -5,7 +5,7 @@
       <v-toolbar-title>Title</v-toolbar-title>
     </v-app-bar>
 
-    <v-navigation-drawer color="primary" v-model="drawer" absolute temporary>
+    <v-navigation-drawer v-model="drawer" color="primary" absolute temporary>
       <v-list nav dense>
         <v-list-item-group
           v-model="group"
