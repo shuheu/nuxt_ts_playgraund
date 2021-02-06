@@ -1,4 +1,4 @@
-# app
+# nuxt-ts-vuetify
 
 ## Build Setup
 
