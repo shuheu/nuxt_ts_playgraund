@@ -17,3 +17,5 @@ create-nuxt-app v3.5.2
 ? What is your GitHub username? shuheu
 ? Version control system: Git
 ```
+
++ Vuetify
