@@ -32,15 +32,17 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/app/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
 
       - name: Install dependencies 👨🏻‍💻
-        run: cd app;npm ci
+        run: npm ci
+        working-directory: ./app
 
       - name: Run linter 👀
-        run: cd app;npm run lint
-
+        run: npm run lint
+        working-directory: ./app
       - name: Run tests 🧪
-        run: cd app;npm run test
+        run: npm run test
+        working-directory: ./app
