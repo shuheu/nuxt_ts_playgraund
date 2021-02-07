@@ -24,11 +24,16 @@ export default Vue.extend({
       res2: '',
     }
   },
+  asyncData(context) {
+    context.app.$htttp.get('/todos/2')
+  },
   methods: {
     call(): void {
-      this.$axios('https://jsonplaceholder.typicode.com/todos/1').then(
-        (response) => (this.res = response.data)
-      )
+      this.$htttp
+        .get('/todos/1', { progress: true })
+        // this.$hoge('Hoge at methods call')
+        // this.$axios('https://jsonplaceholder.typicode.com/todos/1')
+        .then((response) => (this.res = response.data))
     },
   },
 })
